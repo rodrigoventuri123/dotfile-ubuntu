@@ -1,0 +1,59 @@
+{
+	"auto_complete_triggers":
+	[
+		{
+			"characters": "<",
+			"selector": "text.html"
+		},
+		{
+			"characters": ".",
+			"selector": "source.js"
+		}
+	],
+	"binary_file_patterns":
+	[
+		"*.dds",
+		"*.eot",
+		"*.gif",
+		"*.ico",
+		"*.jar",
+		"*.jpeg",
+		"*.jpg",
+		"*.pdf",
+		"*.png",
+		"*.swf",
+		"*.tga",
+		"*.ttf",
+		"*.zip",
+		".shards/**",
+		"node_modules/**"
+	],
+	"bold_folder_labels": true,
+	"close_windows_when_empty": false,
+	"font_size": 16,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Makefile",
+		"Vintage"
+	],
+	"ignored_words":
+	[
+		"http",
+		"https",
+		"localhost",
+		"middleware",
+		"param",
+		"param",
+		"req",
+		"utils"
+	],
+	"index_exclude_patterns":
+	[
+		"*.log",
+		"build/*",
+		"node_modules/*"
+	],
+	"tab_size": 4,
+	"theme": "Default.sublime-theme"
+}

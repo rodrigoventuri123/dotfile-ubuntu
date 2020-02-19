@@ -1,0 +1,41 @@
+[user]
+  name = chyzwar
+  email = schizek.marcin@gmail.com
+
+[github]
+  user = chyzwar
+
+[core]
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+
+  editor = vim
+  filemode = false
+  autocrlf = false
+
+[alias]
+  # List ignored files
+  ignored = ls-files \
+    --others \
+    --ignored \
+    --exclude-standard
+
+  # List contributors
+  contributors = shortlog \
+    --summary \
+    --email \
+    --numbered
+
+  find-branch = !sh -c \"git branch -a | grep -v remotes | grep $1 \"
+
+[grep]
+  lineNumber = true
+
+[help]
+  autocorrect = 1
+
+[push]
+  default = current
+
+[fetch]
+  prune = true
