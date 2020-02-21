@@ -39,23 +39,9 @@ sub_shell () {
     bash install/shell-install.bash
 }
 
-sub_sublime () {
-    sudo chmod +x sublime/sublime-install.bash
-    bash install/sublime-install.bash
-}
-
-sub_atom () {
-    sudo chmod +x install/atom-install.bash
-    bash install/atom-install.bash
-}
-
 sub_vim () {
     sudo chmod +x vim/vim-install.bash
     bash install/vim-install.bash
-}
-sub_emacs () {
-    sudo chmod +x install/emacs-install.bash
-    bash install/emacs-install.bash
 }
 
 sub_vscode () {
