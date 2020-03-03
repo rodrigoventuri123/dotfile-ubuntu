@@ -43,8 +43,7 @@ sudo snap install krita
 sudo snap install gimp
 
 tput setaf 2; echo "Install JetBrains tools"; tput sgr0
-sudo snap install intellij-idea-community
-sudo snap install pycharm-community
+sudo snap install intellij-idea-community --classic
 
 # Change swappiness, default 60, 0 disable
 echo vm.swappiness=0 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
