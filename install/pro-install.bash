@@ -42,37 +42,10 @@ tput setaf 2; echo "Do you want to install node.js and tools"; tput sgr0
 select yn in "Yes" "No"; do
     case $yn in
         Yes )
-            git clone https://github.com/nodenv/nodenv.git ~/.nodenv
-            cd ~/.nodenv && src/configure && make -C src && cd - || return
-            git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
-            git clone https://github.com/nodenv/node-build-update-defs.git ~/.nodenv/plugins/node-build-update-defs
-
-            export PATH="$HOME/.nodenv/bin:$PATH"
-            eval "$(nodenv init -)"
-
-
-            node_versions=(12.10.0 13.5.0)
-            for version in "${node_versions[@]}"
-            do
-                echo "Installing node version" "$version"
-                nodenv install "$version"
-                nodenv global "$version"
-
-                npm install -g --depth 0 npm
-                npm install -g --depth 0 yarn
-                npm install -g --depth 0 lerna
-                npm install -g --depth 0 eslint
-                npm install -g --depth 0 eslint-plugin-react
-                npm install -g --depth 0 eslint-plugin-import
-                npm install -g --depth 0 npm-check
-                npm install -g --depth 0 htmlhint
-                npm install -g --depth 0 csslint
-                npm install -g --depth 0 stylelint
-                npm install -g --depth 0 elm
-                npm install -g --depth 0 typescript
-                npm install -g --depth 0 tslint
-                npm install -g --depth 0 verdaccio
-            done
+            curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+            sudo apt-get update
+            sudo apt-get install nodejs
+            npm install -g @angular/cli
             break;;
         No ) break;;
     esac
